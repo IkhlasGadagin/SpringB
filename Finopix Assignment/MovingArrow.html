@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Finopix</title>
+	<style>
+		canvas {
+			border-width: 10px; border-style: groove;
+            background-image: url("1091423.jpg.webp");
+		}
+        
+h1{
+    border: rgb(128, 0, 0); border-width: 10px; border-style: groove ;
+}
+h2{
+    border: rgb(6, 128, 0); border-width: 5px; border-style: groove ;
+}
+	</style>
+    <h1> <=BUBBLE APPLICATION=></h1>
+    <h2> Click Button to move Specific Arrow to hit Corresponding Circle to Change Color</h2>
+     <button onclick="firstArrowmove();"id="1A"> MoveArrow1</button><h3>click here to move First Arrow</h3>
+
+     <button onclick="secondArrowmove();"id="2A"> MoveArrow2</button><h3>click here to move Second Arrow</h3>
+     <button onclick="thirdArrowmove();"id="3A"> MoveArrow3</button><h3>click here to move Third Arrow</h3>
+     <button onclick="forthArrowmove();"id="4A"> MoveArrow4</button>
+     <h3>click here to move Forth Arrow</h3>
+
+     
+
+</head>
+<body>
+
+	<canvas id="finopix" width="600" height="400"></canvas>
+	<script>
+		var bubble = document.getElementById("finopix");
+		var ctx = bubble.getContext("2d");
+		
+		// Draw circles
+        allCircle();
+
+        function allCircle(){
+       
+		ctx.fillStyle = "red";
+		ctx.beginPath();
+		ctx.arc(50, 50, 30, 0, 2 * Math.PI);
+		ctx.fill();
+       		
+		ctx.fillStyle = "green";
+		ctx.beginPath();
+		ctx.arc(50, 150, 30, 0, 2 * Math.PI);
+		ctx.fill();
+		
+		ctx.fillStyle = "blue";
+		ctx.beginPath();
+		ctx.arc(50, 250, 30, 0, 2 * Math.PI);
+		ctx.fill();
+		
+		ctx.fillStyle = "orange";
+		ctx.beginPath();
+		ctx.arc(50, 350, 30, 0, 2 * Math.PI);
+		ctx.fill();
+        }
+
+        allArrow();
+       
+        function allArrow(){
+        ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,40);
+		ctx.lineTo(500,60);
+		ctx.lineTo(300,60);
+		ctx.lineTo(300,80);
+		ctx.lineTo(275,50);
+		ctx.lineTo(300,15);
+		ctx.lineTo(300,40);
+		ctx.lineTo(500,40);
+
+		
+       
+		ctx.fill();
+		ctx.stroke();
+        ctx.clearRect(0,0,0,0)
+
+        
+		ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,150);
+		ctx.lineTo(500,170);
+		ctx.lineTo(300,170);
+		ctx.lineTo(300,190);
+		ctx.lineTo(275,160);
+		ctx.lineTo(300,120);
+		ctx.lineTo(300,150);
+		ctx.lineTo(500,150);
+
+		ctx.fill();
+		ctx.stroke();
+
+        ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,250);
+		ctx.lineTo(500,270);
+		ctx.lineTo(300,270);
+		ctx.lineTo(300,290);
+		ctx.lineTo(275,260);
+		ctx.lineTo(300,227);
+		ctx.lineTo(300,250);
+		ctx.lineTo(500,250);
+
+	    ctx.fill();
+		ctx.stroke();
+
+        ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,350);
+		ctx.lineTo(500,370);
+		ctx.lineTo(300,370);
+		ctx.lineTo(300,390);
+		ctx.lineTo(280,358);
+		ctx.lineTo(300,325);
+		ctx.lineTo(300,350);
+		ctx.lineTo(500,350);
+
+
+		ctx.fill();
+		ctx.stroke();
+        }
+         
+         function firstArrowmove()
+        {
+          
+            ctx.fillStyle = "yellow";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(300,40);
+		ctx.lineTo(300,60);
+        ctx.lineTo(100,60);
+        ctx.lineTo(100,80);
+        ctx.lineTo(80,48);
+        ctx.lineTo(100,20);
+        ctx.lineTo(100,40);
+        ctx.lineTo(300,40);
+        
+		ctx.fill();
+		
+		ctx.stroke();
+    
+        ctx.fillStyle = "gray";
+		ctx.beginPath();
+		ctx.arc(50, 50, 30, 0, 2 * Math.PI);
+		ctx.fill();
+        ctx.stroke();
+		
+         }
+
+         function secondArrowmove()
+         
+         {
+            ctx.fillStyle = "yellow";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(300,145);
+		ctx.lineTo(300,165);
+        ctx.lineTo(100,165);
+        ctx.lineTo(100,185);
+        ctx.lineTo(78,150);
+        ctx.lineTo(100,125);
+        ctx.lineTo(100,145);
+        ctx.lineTo(300,145);
+       ctx.fill();
+		
+		ctx.stroke();
+        ctx.fillStyle = "magenta";
+		ctx.beginPath();
+		ctx.arc(50, 150, 30, 0, 2 * Math.PI);
+		ctx.fill();
+         }
+
+         function thirdArrowmove()
+         {
+            ctx.fillStyle = "yellow";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(300,250);
+        ctx.lineTo(300,265);
+        ctx.lineTo(100,265);
+        ctx.lineTo(100,285);
+        ctx.lineTo(78,250);
+        ctx.lineTo(100,225);
+        ctx.lineTo(100,250);
+        ctx.lineTo(300,250);
+
+
+       ctx.fill();
+		
+		ctx.stroke();
+
+        ctx.fillStyle = "khaki";
+		ctx.beginPath();
+		ctx.arc(50, 250, 30, 0, 2 * Math.PI);
+		ctx.fill();
+
+         }
+
+         function forthArrowmove()
+         {
+            ctx.fillStyle = "yellow";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+        ctx.moveTo(300,350);
+        ctx.lineTo(300,365);
+        ctx.lineTo(100,365);
+        ctx.lineTo(100,385);
+        ctx.lineTo(78,353);
+        ctx.lineTo(100,325);
+        ctx.lineTo(100,350);
+        ctx.lineTo(300,350);
+        
+       ctx.fill();
+       ctx.stroke();
+        ctx.fillStyle = "coral";
+		ctx.beginPath();
+		ctx.arc(50, 350, 30, 0, 2 * Math.PI);
+		ctx.fill();
+         
+         }
+        
+	</script>
+       <br>
+         <button onclick="allCircle();" id="4A"> RESET COLOR</button>
+         <br>
+         <h1>Click this Resut Button To Reset to the Initial State </h1>
+         <br>
+         <button onclick="allArrow();" id="4A"> RESET ARROW</button>
+</body>
+</html>

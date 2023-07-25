@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Canvas Application</title>
+	<style>
+		canvas {
+			border: 1px solid black;
+			background-image: url("1091423.jpg.webp");
+		}
+		h1{
+		border: rgb(128, 0, 0); border-width: 10px; border-style: groove ;
+	}
+	</style>
+	 <h1> <=BUBBLE APPLICATION=></h1>
+	
+</head>
+<body>
+	<canvas id="canvas" width="600" height="400"></canvas>
+	<script>
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		
+		// Drawing 4 Colored Circle
+		ctx.fillStyle = "red";//to fill color
+		ctx.beginPath(); //drawing start
+		ctx.arc(50, 50, 30, 0, 2 * Math.PI); //circle Drawing
+		ctx.fill();//lastly to fill mentioned color
+		
+		ctx.fillStyle = "green";
+		ctx.beginPath();
+		ctx.arc(50, 150, 30, 0, 2 * Math.PI);
+		ctx.fill();
+		
+		ctx.fillStyle = "blue";
+		ctx.beginPath();
+		ctx.arc(50, 250, 30, 0, 2 * Math.PI);
+		ctx.fill();
+		
+		ctx.fillStyle = "orange";
+		ctx.beginPath();
+		ctx.arc(50, 350, 30, 0, 2 * Math.PI);
+		ctx.fill();
+         
+		//Drawing 4 Arrows  using co-ordinates 
+       ctx.fillStyle = "blue";
+		ctx.lineWidth=3;//tickness of line
+		ctx.beginPath();
+		ctx.moveTo(500,40);//taking courser to this point
+		ctx.lineTo(500,60);//drawing arrow using lineTo method
+		ctx.lineTo(300,60);
+		ctx.lineTo(300,80);
+		ctx.lineTo(275,50);
+		ctx.lineTo(300,15);
+		ctx.lineTo(300,40);
+		ctx.lineTo(500,40);
+
+		
+       
+		ctx.fill();
+		
+		ctx.stroke();//to print line(draw)
+///------------------------------
+
+
+
+		ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,150);
+		ctx.lineTo(500,170);
+		ctx.lineTo(300,170);
+		ctx.lineTo(300,190);
+		ctx.lineTo(275,160);
+		ctx.lineTo(300,120);
+		ctx.lineTo(300,150);
+		ctx.lineTo(500,150);
+		
+
+		ctx.fill();
+		
+		ctx.stroke();
+
+		//-----------------------------------------------
+         
+		ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,250);
+		ctx.lineTo(500,270);
+		ctx.lineTo(300,270);
+		ctx.lineTo(300,290);
+		ctx.lineTo(275,260);
+		ctx.lineTo(300,227);
+		ctx.lineTo(300,250);
+		ctx.lineTo(500,250);
+
+
+	    ctx.fill();
+		
+		ctx.stroke();
+
+		//-------------------------------------------
+
+		ctx.fillStyle = "blue";
+		ctx.lineWidth=3;
+		ctx.beginPath();
+		ctx.moveTo(500,350);
+		ctx.lineTo(500,370);
+		ctx.lineTo(300,370);
+		ctx.lineTo(300,390);
+		ctx.lineTo(280,358);
+		ctx.lineTo(300,325);
+		ctx.lineTo(300,350);
+		ctx.lineTo(500,350);
+
+
+		ctx.fill();
+		
+		ctx.stroke();
+	</script>
+	<h2>Module 1</h2>
+</body>
+</html>
